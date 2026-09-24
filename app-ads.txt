@@ -165,7 +165,7 @@ bigo.sg, adidz3dyfp, RESELLER
 
 # --- ironSource Ads / ironSource Exchange (LevelPlay's own network) ---
 # Authorized resellers, from docs.unity.com/en-us/grow/programmatic/ironsource-exchange/app-ads-txt
-# The DIRECT line needs the ironSource publisher ID: ironsrc.com, <publisher ID>, DIRECT
+ironsrc.com, 686243, DIRECT
 media.net, 8CUH2L333, RESELLER
 sharethrough.com, 3817, RESELLER, d53b998a7bd4ecd2
 playdigo.com, 1956, RESELLER
