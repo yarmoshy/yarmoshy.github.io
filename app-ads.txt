@@ -1,0 +1,3 @@
+# app-ads.txt for Graceful Games (Parsecs)
+# Authorized sellers of this developer's ad inventory.
+# Lines from Unity LevelPlay and Unity Ads go below, exactly as their dashboards give them.
