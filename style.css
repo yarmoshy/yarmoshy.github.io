@@ -1,44 +1,232 @@
+/* Graceful Games - styled after Parsecs: a deep-space nebula, a starfield,
+   and the game's neon menu rings (blue PLAY, purple AWARDS, pink UPGRADES). */
 :root {
-  --bg: #0b0d1c;
-  --panel: #141833;
-  --ink: #e8e9f4;
-  --muted: #a3a8c6;
-  --line: #262b4f;
-  --accent: #ffb35c;
-  --link: #8fc8ff;
-  --display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --bg: #0a0618;
+  --panel: rgba(18, 10, 40, 0.72);
+  --panel-solid: #140c2c;
+  --ink: #f1edff;
+  --muted: #b5abd6;
+  --line: rgba(160, 120, 255, 0.22);
+  --ring-blue: #2f6bff;
+  --ring-purple: #9a46ff;
+  --ring-pink: #ff2f86;
+  --xp: #c6ff2e;
+  --gg: #00a3d4;
+  --link: #7fd6ff;
+  --display: "Audiowide", "Segoe UI", system-ui, sans-serif;
   --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   color-scheme: dark;
 }
+
 * { box-sizing: border-box; }
 html, body { margin: 0; }
+
 body {
-  background: var(--bg);
-  background-image: radial-gradient(ellipse at 20% -10%, #1f2455 0%, transparent 55%),
-                    radial-gradient(ellipse at 110% 10%, #2a1b3f 0%, transparent 45%);
-  background-attachment: fixed;
+  background-color: var(--bg);
   color: var(--ink);
   font: 17px/1.65 var(--body);
-  padding: 0 20px;
+  padding: 0 16px;
+  min-height: 100vh;
+  position: relative;
 }
-.wrap { max-width: 720px; margin: 0 auto; padding: 40px 0 72px; }
-header.site { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 48px; }
-.brand { font: 600 18px var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
-nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 15px; }
-nav a:first-child { margin-left: 0; }
-nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
-h1, h2, h3 { font-family: var(--display); line-height: 1.2; text-wrap: balance; }
-h1 { font-size: clamp(32px, 7vw, 52px); margin: 0 0 12px; letter-spacing: .02em; }
-h2 { font-size: 22px; margin: 40px 0 10px; color: var(--accent); }
-h3 { font-size: 18px; margin: 24px 0 6px; }
-p, li { max-width: 66ch; }
-.lede { color: var(--muted); font-size: 19px; margin: 0 0 32px; }
+
+/* The game's own nebula, darkened so text stays easy to read. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(180deg, rgba(10, 6, 24, 0.55) 0%, rgba(10, 6, 24, 0.82) 55%, rgba(10, 6, 24, 0.95) 100%),
+    url("assets/nebula.jpg") center top / cover no-repeat;
+}
+
+/* A sprinkle of stars in the game's three tints: white, pink and teal. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.75;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%, #fff 60%, transparent 61%),
+    radial-gradient(1px 1px at 27% 72%, #fff 60%, transparent 61%),
+    radial-gradient(2px 2px at 41% 33%, #ec52ea 60%, transparent 61%),
+    radial-gradient(1px 1px at 58% 12%, #fff 60%, transparent 61%),
+    radial-gradient(1.5px 1.5px at 66% 58%, #3eaabd 60%, transparent 61%),
+    radial-gradient(1px 1px at 79% 27%, #fff 60%, transparent 61%),
+    radial-gradient(2px 2px at 88% 81%, #fff 60%, transparent 61%),
+    radial-gradient(1px 1px at 8% 90%, #3eaabd 60%, transparent 61%),
+    radial-gradient(1.5px 1.5px at 93% 46%, #ec52ea 60%, transparent 61%),
+    radial-gradient(1px 1px at 51% 88%, #fff 60%, transparent 61%);
+}
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 28px 0 64px; }
+.wrap.narrow { max-width: 760px; }
+
+/* Header: the Graceful Games logo and the three pages. */
+header.site {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.brand { display: inline-flex; align-items: center; }
+.brand img { height: 72px; width: auto; display: block; filter: drop-shadow(0 0 10px rgba(0, 163, 212, 0.35)); }
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  font: 14px var(--display);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+}
+nav a:hover { color: var(--ink); border-color: var(--line); }
+nav a[aria-current="page"] { color: var(--ink); border-color: var(--ring-blue); box-shadow: 0 0 12px rgba(47, 107, 255, 0.45); }
+
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(30px, 6vw, 46px); margin: 0 0 12px; letter-spacing: 0.03em; text-transform: uppercase; }
+h2 { font-size: 21px; margin: 40px 0 10px; color: var(--ring-pink); text-transform: uppercase; letter-spacing: 0.05em; }
+h3 { font-size: 17px; margin: 26px 0 6px; color: var(--ink); letter-spacing: 0.02em; }
+p, li { max-width: 68ch; }
 a { color: var(--link); }
-.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; margin: 24px 0; }
-.card h2 { margin-top: 0; }
-.platforms { color: var(--muted); font-size: 15px; }
+strong { color: var(--ink); }
+.lede { color: var(--muted); font-size: 19px; margin: 0 0 28px; }
 .meta { color: var(--muted); font-size: 14px; }
-code { font-size: 15px; background: var(--panel); padding: 1px 6px; border-radius: 4px; }
-footer.site { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+code { font-size: 15px; background: var(--panel-solid); padding: 1px 6px; border-radius: 4px; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin: 24px 0;
+  backdrop-filter: blur(6px);
+}
+.card h2 { margin-top: 0; }
+
+/* Home: the hero. */
+.hero { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; margin: 8px 0 36px; }
+.hero .title { width: 100%; max-width: 560px; height: auto; display: block; filter: drop-shadow(0 4px 18px rgba(154, 70, 255, 0.45)); }
+.hero .tagline { font-size: 20px; color: var(--muted); margin: 20px 0 0; max-width: 46ch; }
+.hero .ship {
+  width: clamp(96px, 16vw, 150px);
+  height: auto;
+  filter: drop-shadow(0 0 24px rgba(255, 47, 134, 0.55));
+  animation: drift 6s ease-in-out infinite;
+}
+@keyframes drift {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-14px) rotate(4deg); }
+}
+
+/* The game's menu rings, as links. */
+.rings { display: flex; flex-wrap: wrap; gap: 18px; margin: 8px 0 8px; }
+.ring {
+  --c: var(--ring-blue);
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-align: center;
+  padding: 18px;
+  font: 15px/1.2 var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-decoration: none;
+  border: 3px solid var(--c);
+  box-shadow: 0 0 14px var(--c), inset 0 0 0 7px rgba(10, 6, 24, 0.85), inset 0 0 0 8.5px var(--c), inset 0 0 22px rgba(0, 0, 0, 0.6);
+  background: radial-gradient(circle, rgba(10, 6, 24, 0.85) 60%, rgba(10, 6, 24, 0.6) 100%);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ring:hover, .ring:focus-visible { transform: scale(1.05); box-shadow: 0 0 24px var(--c), inset 0 0 0 7px rgba(10, 6, 24, 0.85), inset 0 0 0 8.5px var(--c), inset 0 0 22px rgba(0, 0, 0, 0.6); outline: none; }
+.ring.purple { --c: var(--ring-purple); }
+.ring.pink { --c: var(--ring-pink); }
+.ring small { display: block; font: 12px/1.25 var(--body); text-transform: none; letter-spacing: 0; color: var(--muted); max-width: 84px; }
+
+/* Screenshots, phone-shaped, in a row that scrolls on narrow screens. */
+.shots {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(150px, 1fr);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 6px 2px 18px;
+  margin: 0 0 8px;
+}
+.shots figure { margin: 0; scroll-snap-align: start; }
+.shots img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 2;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55), 0 0 18px rgba(154, 70, 255, 0.25);
+  display: block;
+}
+.shots figcaption { font-size: 13px; color: var(--muted); text-align: center; margin-top: 8px; }
+
+.features { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.features li { padding-left: 28px; position: relative; max-width: none; }
+.features li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.55em;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--xp);
+  box-shadow: 0 0 8px var(--xp);
+}
+
+.platforms { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
+.platforms li {
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(10, 6, 24, 0.6);
+  color: var(--muted);
+}
+
+footer.site {
+  margin-top: 64px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+footer.site img { height: 48px; width: auto; }
 footer.site a { color: var(--muted); }
-@media (max-width: 480px) { nav a { margin-left: 12px; } }
+
+@media (max-width: 640px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero .ship { justify-self: center; grid-row: 1; }
+  .brand img { height: 58px; }
+  .ring { width: 112px; height: 112px; font-size: 13px; }
+  .shots { grid-auto-columns: 58%; }
+  .rings { justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .ship { animation: none; }
+  .ring { transition: none; }
+}

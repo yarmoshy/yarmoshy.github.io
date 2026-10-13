@@ -4,35 +4,79 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Graceful Games</title>
-<meta name="description" content="Graceful Games, maker of Parsecs.">
+<meta name="description" content="Graceful Games, maker of Parsecs: a physics-based space adventure through asteroids, planets, suns and black holes.">
+<meta property="og:title" content="Parsecs by Graceful Games">
+<meta property="og:description" content="Travel to the farthest reaches of the universe while dodging asteroids and other surprises.">
+<meta property="og:image" content="https://yarmoshy.github.io/assets/01-title.jpg">
+<meta name="theme-color" content="#0a0618">
+<link rel="icon" href="assets/gg-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&family=Source+Sans+3:wght@400;600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
   <header class="site">
-    <a class="brand" href="./">Graceful Games</a>
+    <a class="brand" href="./"><img src="assets/gg-logo.png" alt="Graceful Games" width="526" height="386"></a>
     <nav>
       <a href="./" aria-current="page">Home</a>
-      <a href="privacy.html">Privacy</a>
       <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </header>
 
-  <h1>Parsecs</h1>
-  <p class="lede">Steer a small ship through a field of asteroids, planets, suns and black holes, and see how many parsecs you can cover before it all catches up with you.</p>
+  <section class="hero">
+    <div>
+      <h1 style="margin:0"><img class="title" src="assets/parsecs-logo.png" alt="Parsecs" width="848" height="127"></h1>
+      <p class="tagline">Travel to the farthest reaches of the universe while dodging asteroids and other surprises in this physics-based epic space adventure.</p>
+    </div>
+    <img class="ship" src="assets/ship.png" alt="" width="153" height="183">
+  </section>
+
+  <div class="shots" aria-label="Screenshots">
+    <figure><img src="assets/01-title.jpg" alt="The Parsecs title screen with its Play, Awards and Upgrades rings" width="480" height="960" loading="lazy"><figcaption>Easy to learn</figcaption></figure>
+    <figure><img src="assets/02-bubbles.jpg" alt="The ship flying past planets and asteroid bubbles" width="480" height="960" loading="lazy"><figcaption>Asteroid bubbles</figcaption></figure>
+    <figure><img src="assets/03-black-hole.jpg" alt="A black hole pulling at the field" width="480" height="960" loading="lazy"><figcaption>Black holes</figcaption></figure>
+    <figure><img src="assets/04-sun.jpg" alt="The ship skirting a burning sun" width="480" height="960" loading="lazy"><figcaption>Burning suns</figcaption></figure>
+    <figure><img src="assets/05-deep-space.jpg" alt="Deep space, 85 parsecs out" width="480" height="960" loading="lazy"><figcaption>Deep space</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>Features</h2>
+    <ul class="features">
+      <li>Easy to learn, hard to master. Flick or drag anywhere to move in that direction; tap to use asteroid mines.</li>
+      <li>Gamepad support: aim the joysticks to fly the ship.</li>
+      <li>Fast-paced play that calls for quick reflexes and creates awesome close calls.</li>
+      <li>Upgrades to take you deeper into space: shields to survive longer and space mines to clear the way ahead.</li>
+      <li>Spacescapes that change every 10 parsecs, 26 planets, over 60 asteroid combinations, suns, black holes, parallax stars and&hellip; asteroid bubbles?</li>
+      <li>Achievements and leaderboards.</li>
+    </ul>
+  </div>
 
   <div class="card">
     <h2>Coming soon</h2>
     <p>Parsecs is on its way to iPhone and iPad, Android, Amazon Fire, Mac, Windows and Linux.</p>
-    <p class="platforms">App Store · Google Play · Amazon Appstore · Mac App Store · Steam · itch.io</p>
+    <ul class="platforms">
+      <li>App Store</li>
+      <li>Google Play</li>
+      <li>Amazon Appstore</li>
+      <li>Mac App Store</li>
+      <li>Steam</li>
+      <li>itch.io</li>
+    </ul>
   </div>
 
-  <p>Questions or problems? See <a href="support.html">Support</a>. How the game handles your information is in the <a href="privacy.html">privacy policy</a>.</p>
+  <div class="rings">
+    <a class="ring" href="support.html">Support<small>Help and FAQ</small></a>
+    <a class="ring purple" href="privacy.html">Privacy<small>Your information</small></a>
+    <a class="ring pink" href="mailto:gracefulgames@gmail.com">Contact<small>Email us</small></a>
+  </div>
 
-  <footer class="site">© 2026 Graceful Games</footer>
+  <footer class="site">
+    <img src="assets/gg-logo.png" alt="" width="526" height="386">
+    <span>© 2026 Graceful Games</span>
+  </footer>
 </div>
 </body>
 </html>
