@@ -33,6 +33,7 @@ loopme.com, 2896, RESELLER, 6c8d5f95897a5a3b
 sharethrough.com, 5828, RESELLER, d53b998a7bd4ecd2
 triplelift.com, 14127, RESELLER, 6c33edb13117fd86
 smaato.com, 1100059563, RESELLER, 07bcf65f187117b4
+smaato.com, 1100059345, RESELLER, 07bcf65f187117b4
 loopme.com, 9621, RESELLER, 6c8d5f95897a5a3b
 start.io, 197760873, RESELLER
 bold-win.com, 1013, RESELLER, 71746737d0bab951
