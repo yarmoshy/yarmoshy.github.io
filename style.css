@@ -179,6 +179,18 @@ code { font-size: 15px; background: var(--panel-solid); padding: 1px 6px; border
 }
 .shots figcaption { font-size: 13px; color: var(--muted); text-align: center; margin-top: 8px; }
 
+/* The gameplay trailer, 16:9 at the column's full width on any screen. */
+.video {
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  margin: 0 0 28px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #000;
+}
+.video iframe { display: block; width: 100%; height: 100%; border: 0; }
+
 .features { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .features li { padding-left: 28px; position: relative; max-width: none; }
 .features li::before {
