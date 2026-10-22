@@ -114,6 +114,8 @@ code { font-size: 15px; background: var(--panel-solid); padding: 1px 6px; border
 /* Home: the hero. */
 .hero { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; margin: 8px 0 36px; }
 .hero .title { width: 100%; max-width: 560px; height: auto; display: block; filter: drop-shadow(0 4px 18px rgba(154, 70, 255, 0.45)); }
+.hint { font: 16px var(--display); letter-spacing: 0.04em; color: var(--muted); margin: -4px 0 14px; }
+.hero .studio { font: 15px var(--display); letter-spacing: 0.08em; color: var(--muted); margin: 14px 0 0; }
 .hero .tagline { font-size: 20px; color: var(--muted); margin: 20px 0 0; max-width: 46ch; }
 .hero .ship {
   width: clamp(96px, 16vw, 150px);

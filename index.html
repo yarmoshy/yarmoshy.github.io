@@ -3,17 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Graceful Games</title>
+<title>Graceful Games | Makers of Parsecs, a space adventure game</title>
 <meta name="description" content="Graceful Games, maker of Parsecs: a physics-based space adventure through asteroids, planets, suns and black holes.">
+<link rel="canonical" href="https://gracefulgames.net/">
+<meta property="og:site_name" content="Graceful Games">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gracefulgames.net/">
 <meta property="og:title" content="Parsecs by Graceful Games">
 <meta property="og:description" content="Travel to the farthest reaches of the universe while dodging asteroids and other surprises.">
 <meta property="og:image" content="https://gracefulgames.net/assets/01-title.jpg">
 <meta name="theme-color" content="#0a0618">
-<link rel="icon" href="assets/gg-logo.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://gracefulgames.net/#website",
+      "name": "Graceful Games",
+      "alternateName": "gracefulgames.net",
+      "url": "https://gracefulgames.net/",
+      "publisher": { "@id": "https://gracefulgames.net/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://gracefulgames.net/#org",
+      "name": "Graceful Games",
+      "url": "https://gracefulgames.net/",
+      "logo": "https://gracefulgames.net/assets/gg-logo.png",
+      "email": "kevin@gracefulgames.net"
+    },
+    {
+      "@type": "VideoGame",
+      "name": "Parsecs",
+      "url": "https://gracefulgames.net/",
+      "description": "A physics-based space adventure: travel to the farthest reaches of the universe while dodging asteroids, planets, suns and black holes.",
+      "image": "https://gracefulgames.net/assets/01-title.jpg",
+      "genre": ["Arcade", "Action"],
+      "gamePlatform": ["iOS", "Android", "Windows", "macOS", "Linux"],
+      "publisher": { "@id": "https://gracefulgames.net/#org" },
+      "author": { "@id": "https://gracefulgames.net/#org" },
+      "trailer": {
+        "@type": "VideoObject",
+        "name": "Parsecs gameplay trailer",
+        "embedUrl": "https://www.youtube.com/embed/2_z4s0PVb4Q",
+        "thumbnailUrl": "https://i.ytimg.com/vi/2_z4s0PVb4Q/hqdefault.jpg"
+      }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&family=Source+Sans+3:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css?v=2026-10-16">
+<link rel="stylesheet" href="style.css?v=2026-10-22">
 </head>
 <body>
 <div class="wrap">
@@ -29,6 +75,7 @@
   <section class="hero">
     <div>
       <h1 style="margin:0"><img class="title" src="assets/parsecs-logo.png" alt="Parsecs" width="848" height="127"></h1>
+      <p class="studio">A game by Graceful Games</p>
       <p class="tagline">Travel to the farthest reaches of the universe while dodging asteroids and other surprises in this physics-based epic space adventure.</p>
     </div>
     <img class="ship" src="assets/ship.png" alt="" width="153" height="183">
@@ -48,13 +95,18 @@
 
   <div class="card">
     <h2>Features</h2>
+    <p class="hint">What secrets await you at the edge of space?</p>
     <ul class="features">
       <li>Easy to learn, hard to master. Flick or drag anywhere to move in that direction; tap to use asteroid mines.</li>
-      <li>Gamepad support: aim the joysticks to fly the ship.</li>
+      <li>Gamepad support: aim the joysticks to fly the ship, and A, B or the triggers to use asteroid mines.</li>
       <li>Fast-paced play that calls for quick reflexes and creates awesome close calls.</li>
       <li>Upgrades to take you deeper into space: shields to survive longer and space mines to clear the way ahead.</li>
+      <li>New ways to fly: BUBBLE RUN, a race to pop the most space bubbles, and ZEN MODE, a calm flight through space where nothing can hurt you. And for the pilots who reach the Edge of Space, something ominous waits beyond it&hellip;</li>
       <li>Spacescapes that change every 10 parsecs, 26 planets, over 60 asteroid combinations, suns, black holes, parallax stars and&hellip; asteroid bubbles?</li>
       <li>Achievements and leaderboards.</li>
+      <li>The same game on every device, balanced for any screen size.</li>
+      <li>Accessible: follows Reduce Motion, and text grows with your larger text size setting.</li>
+      <li>Custom colors for your ship, shield, mine blast and engine trail.</li>
     </ul>
   </div>
 
