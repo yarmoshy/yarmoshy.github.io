@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parsecs Press Kit | Graceful Games</title>
+<meta name="description" content="Press kit for Parsecs by Graceful Games: fact sheet, screenshots, features and press contact.">
+<link rel="canonical" href="https://gracefulgames.net/press/">
+<meta property="og:site_name" content="Graceful Games">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gracefulgames.net/press/">
+<meta property="og:title" content="Parsecs Press Kit">
+<meta property="og:description" content="A physics-based space flight through ever-harder fields of asteroids, planets, suns and black holes, on iPhone, iPad and Mac.">
+<meta property="og:image" content="https://gracefulgames.net/press/header.jpg">
+<meta name="theme-color" content="#0b0718">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  color-scheme: dark;
+  --space: #0b0718;
+  --panel: #161029;
+  --line: #2b2147;
+  --ink: #f1ecff;
+  --muted: #a99fc9;
+  --magenta: #e2337e;
+  --cyan: #46d6e8;
+  --display: "Michroma", "Eurostile", "Arial Black", sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+body { background: var(--space); color: var(--ink); font: 17px/1.6 var(--body); margin: 0; padding-inline: 20px; padding-block: 0 72px; }
+.wrap { max-width: 980px; margin: 0 auto; display: flex; flex-direction: column; gap: 64px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: 0.02em; }
+h2 { font-size: 20px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cyan); }
+h3 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; }
+p { margin: 0; max-width: 66ch; }
+a { color: var(--cyan); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.muted { color: var(--muted); }
+section { display: flex; flex-direction: column; gap: 20px; }
+
+.hero { margin-inline: -20px; position: relative; }
+.hero img { display: block; width: 100%; aspect-ratio: 21 / 9; object-fit: cover; max-width: 100%; }
+.hero .shade { position: absolute; inset: auto 0 0 0; height: 55%; background: linear-gradient(to bottom, transparent, var(--space)); }
+.intro { display: grid; grid-template-columns: 112px 1fr; gap: 24px; align-items: center; margin-top: -40px; position: relative; }
+.intro img { width: 112px; height: 112px; border-radius: 25px; box-shadow: 0 8px 32px rgba(0,0,0,.6); }
+.intro h1 { font-size: clamp(30px, 6vw, 46px); }
+.tagline { font-size: 19px; color: var(--muted); margin-top: 6px; }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.fact { padding: 14px 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
+.fact .k { font: 500 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.fact .v { font-size: 16px; }
+
+.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.mode { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.mode .badge { font: 500 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.mode h3 { color: var(--ink); }
+.mode.bubble { border-color: #23596a; }
+.mode.zen { border-color: #5a2147; }
+.mode.secret { border-style: dashed; }
+.mode.secret h3 { color: var(--muted); letter-spacing: 0.3em; }
+
+ul.features { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; max-width: 70ch; }
+ul.features li::marker { color: var(--magenta); }
+
+.tech { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px 32px; }
+.tech div { display: flex; flex-direction: column; gap: 6px; }
+.tech h3 { color: var(--magenta); font-size: 13px; }
+
+.shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.shots img { width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; }
+.macshot img { width: 100%; border-radius: 8px; border: 1px solid var(--line); display: block; }
+@media (max-width: 640px) { .shots { grid-template-columns: repeat(2, 1fr); } .intro { grid-template-columns: 80px 1fr; } .intro img { width: 80px; height: 80px; border-radius: 18px; } }
+
+.contact { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 24px; display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; }
+.contact .addr { font: 500 18px var(--mono); user-select: all; }
+.copy { font: 500 13px var(--mono); background: transparent; color: var(--cyan); border: 1px solid var(--cyan); border-radius: 4px; padding: 6px 12px; cursor: pointer; }
+footer { color: var(--muted); font-size: 14px; }
+@media (prefers-reduced-motion: no-preference) { .copy { transition: background .15s; } .copy:hover { background: rgba(70,214,232,.12); } }
+.wrap { position: relative; }
+.back { position: absolute; top: 12px; left: 0; z-index: 1; font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; background: rgba(11,7,24,.75); padding: 6px 10px; border-radius: 4px; text-decoration: none; }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <a class="back" href="/">&larr; gracefulgames.net</a>
+  <div class="hero">
+    <img src="header.jpg" alt="Parsecs: a ship flying through a field of planets, asteroids and space bubbles">
+    <div class="shade"></div>
+  </div>
+
+  <header class="intro">
+    <img src="icon.png" alt="Parsecs app icon">
+    <div>
+      <h1>Parsecs</h1>
+      <p class="tagline">A physics-based space flight through ever-harder fields of asteroids, planets, suns and black holes. How far can you go?</p>
+    </div>
+  </header>
+
+  <section aria-labelledby="facts">
+    <h2 id="facts">Fact sheet</h2>
+    <div class="facts">
+      <div class="fact"><span class="k">Developer</span><span class="v">Graceful Games</span></div>
+      <div class="fact"><span class="k">Release date</span><span class="v">To be announced</span></div>
+      <div class="fact"><span class="k">Platforms</span><span class="v">iPhone, iPad, Mac</span></div>
+      <div class="fact"><span class="k">Price</span><span class="v">Free on iPhone and iPad; paid on Mac, everything included</span></div>
+      <div class="fact"><span class="k">Languages</span><span class="v">21: English, Spanish, French, German, Italian, Portuguese (Brazil and Portugal), Dutch, Danish, Norwegian, Swedish, Catalan, Indonesian, Malay, Polish, Romanian, Turkish, Russian, Ukrainian, Japanese, Korean</span></div>
+      <div class="fact"><span class="k">Website</span><span class="v"><a href="https://gracefulgames.net">gracefulgames.net</a></span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="about">
+    <h2 id="about">About the game</h2>
+    <p>Parsecs is a revival of the original iOS game of the same name, rebuilt from the ground up for every Apple device. You flick or drag anywhere to send your ship flying, and each parsec you cross brings a new field: drifting asteroids, planets to bounce off, suns that burn whatever touches them, black holes that pull everything in, and space bubbles that burst their swarm of asteroids when you pop them.</p>
+    <p>XP from every run buys upgrades: shields that take a hit for you, space mines to clear the way and a holster to fire them yourself, a warp drive that starts each run deeper into space, and Recurrence, an extra life that carries a run on from the parsec it ended. Past The Edge of Space, stranger upgrades are waiting for the pilots who get there.</p>
+    <p>The game balances its field for whatever screen it is on, so a run on an iPhone plays the same as a run on an iPad or a Mac display.</p>
+  </section>
+
+  <section aria-labelledby="modes">
+    <h2 id="modes">Ways to fly</h2>
+    <div class="modes">
+      <div class="mode"><span class="badge">From the start</span><h3>Parsecs</h3><p>The classic run. Fly as far as you can; every parsec is harder than the last.</p></div>
+      <div class="mode bubble"><span class="badge">Unlocked at parsec 25</span><h3>Bubble Run</h3><p>Fields of nothing but space bubbles. Distance doesn't count here, only bubbles popped, and the far edge stays closed until every one in the field is gone.</p></div>
+      <div class="mode zen"><span class="badge">Unlocked early</span><h3>Zen Mode</h3><p>A calm flight through space with nothing that can hurt you: planets and empty bubbles, at your own pace.</p></div>
+      <div class="mode secret"><span class="badge">Beyond The Edge of Space</span><h3>???</h3><p>Pilots who reach The Edge of Space find something ominous waiting past it, and upgrades no one else has seen. Some secrets are for players to discover.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="screens">
+    <h2 id="screens">Screenshots</h2>
+    <div class="shots">
+      <img src="02-play-14-14-2.jpg" alt="iPhone: the ship weaving between asteroids near a space bubble">
+      <img src="03-play-27-27-0.jpg" alt="iPhone: a black hole pulling asteroids into its swirl">
+      <img src="05-sun-5x-51-1.jpg" alt="iPhone: a giant sun at the edge of the field">
+      <img src="06-3-play-76.jpg" alt="iPhone: a dense field deep into a run">
+    </div>
+    <div class="macshot"><img src="mac.jpg" alt="Mac: a wide field of planets and space bubbles"></div>
+  </section>
+
+  <section aria-labelledby="apple">
+    <h2 id="apple">Built for Apple platforms</h2>
+    <div class="tech">
+      <div><h3>Game Center challenges and activities</h3><p>Challenge friends on Best Run, Furthest and Bubble Run, and jump straight into a run from the Games app with Fly a Run and Bubble Run. Pilots who reach The Edge of Space unlock more challenges and an activity of their own.</p></div>
+      <div><h3>Every device on day one</h3><p>iPhone, iPad and Mac, plus iPhone Duo on both its screens. One Game Center for all of them: achievements and leaderboards are shared across the iOS and Mac apps.</p></div>
+      <div><h3>Controllers</h3><p>Fly with any game controller: aim with the sticks, fire mines with the buttons, and every menu works from the pad.</p></div>
+      <div><h3>Accessibility</h3><p>Reduce Motion on every platform: the warp, the parallax stars and the quantum glitches hold still, and the quantum wave's static calms down. Warning effects stay inside photosensitivity limits for everyone. On iPhone and iPad the reading text grows with the system text size, and haptic taps mark bubbles, shield hits, mines and crashes for players who play muted.</p></div>
+      <div><h3>Respectful by design</h3><p>No forced ads, ever. An optional ad doubles a run's XP; Support Developer does it for every run and unlocks custom colors. Ads are only personalized if the player says yes.</p></div>
+      <div><h3>Plays fair everywhere</h3><p>Pauses itself when you switch apps, pull down Notification Center or take a call, and syncs progress through iCloud.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Press contact</h2>
+    <div class="contact">
+      <div>
+        <p class="muted">Review codes, high-resolution screenshots, App Previews and logos on request.</p>
+        <p class="addr" id="email">kevin@gracefulgames.net</p>
+      </div>
+      <button class="copy" type="button" id="copy">Copy address</button>
+    </div>
+  </section>
+
+  <footer>Parsecs &copy; Graceful Games. Screenshots are from the game as it plays.</footer>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var button = this;
+  var text = document.getElementById('email').textContent;
+  function done(label) { button.textContent = label; setTimeout(function () { button.textContent = 'Copy address'; }, 1600); }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function () { done('Copied'); }, function () { select(); });
+  } else { select(); }
+  function select() {
+    var range = document.createRange(); range.selectNodeContents(document.getElementById('email'));
+    var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range); done('Selected');
+  }
+});
+</script>
+</body>
+</html>
