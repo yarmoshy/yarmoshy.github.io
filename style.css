@@ -169,6 +169,8 @@ code { font-size: 15px; background: var(--panel-solid); padding: 1px 6px; border
   margin: 0 0 8px;
 }
 .shots figure { margin: 0; scroll-snap-align: start; }
+/* Each shot opens on its own, full size. */
+.shots a { display: block; }
 .shots img {
   width: 100%;
   height: auto;

@@ -74,6 +74,8 @@ ul.features li::marker { color: var(--magenta); }
 .tech h3 { color: var(--magenta); font-size: 13px; }
 
 .shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+/* Each picture opens on its own, full size. */
+.hero a, .shots a, .macshot a { display: block; }
 .shots img { width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; }
 .macshot img { width: 100%; border-radius: 8px; border: 1px solid var(--line); display: block; }
 @media (max-width: 640px) { .shots { grid-template-columns: repeat(2, 1fr); } .intro { grid-template-columns: 80px 1fr; } .intro img { width: 80px; height: 80px; border-radius: 18px; } }
@@ -90,12 +92,12 @@ footer { color: var(--muted); font-size: 14px; }
 
 <div class="wrap">
   <div class="hero">
-    <img src="header.jpg" alt="Parsecs: a ship flying through a field of planets, asteroids and space bubbles">
+    <a href="header.jpg" target="_blank" rel="noopener"><img src="header.jpg" alt="Parsecs: a ship flying through a field of planets, asteroids and space bubbles"></a>
     <div class="shade"></div>
   </div>
 
   <header class="intro">
-    <img src="icon.png" alt="Parsecs app icon">
+    <a href="icon.png" target="_blank" rel="noopener"><img src="icon.png" alt="Parsecs app icon"></a>
     <div>
       <h1>Parsecs</h1>
       <p class="tagline">A physics-based space flight through ever-harder fields of asteroids, planets, suns and black holes. How far can you go?</p>
@@ -134,12 +136,12 @@ footer { color: var(--muted); font-size: 14px; }
   <section aria-labelledby="screens">
     <h2 id="screens">Screenshots</h2>
     <div class="shots">
-      <img src="bubbles.jpg" alt="The shielded ship flying past two space bubbles full of asteroids, at 10 parsecs">
-      <img src="black-hole.jpg" alt="A black hole swirling beside a ringed planet, at 30 parsecs">
-      <img src="sun.jpg" alt="A giant sun at the edge of the field, with two lava planets, at 50 parsecs">
-      <img src="deep-space.jpg" alt="A crowded field of planets, asteroids and a space bubble, at 85 parsecs">
+      <a href="bubbles.jpg" target="_blank" rel="noopener"><img src="bubbles.jpg" alt="The shielded ship flying past two space bubbles full of asteroids, at 10 parsecs"></a>
+      <a href="black-hole.jpg" target="_blank" rel="noopener"><img src="black-hole.jpg" alt="A black hole swirling beside a ringed planet, at 30 parsecs"></a>
+      <a href="sun.jpg" target="_blank" rel="noopener"><img src="sun.jpg" alt="A giant sun at the edge of the field, with two lava planets, at 50 parsecs"></a>
+      <a href="deep-space.jpg" target="_blank" rel="noopener"><img src="deep-space.jpg" alt="A crowded field of planets, asteroids and a space bubble, at 85 parsecs"></a>
     </div>
-    <div class="macshot"><img src="wide.jpg" alt="A wide field of planets and space bubbles, at 10 parsecs"></div>
+    <div class="macshot"><a href="wide.jpg" target="_blank" rel="noopener"><img src="wide.jpg" alt="A wide field of planets and space bubbles, at 10 parsecs"></a></div>
   </section>
 
   <section aria-labelledby="apple">
